@@ -12,7 +12,9 @@
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -c -w",
     "format:check": "prettier src --check",
-    "format:write": "prettier src --write"
+    "format:write": "prettier src --write",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "repository": {
     "type": "git",
@@ -24,16 +26,15 @@
   "bugs": {
     "url": "https://github.com/andriykotsur/react-timer-control/issues"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
-  },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^19.2.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react": "^7.37.5",
     "prettier": "^3.6.2",
     "react": "^19.2.0",
     "rimraf": "^6.1.0",
@@ -41,6 +42,11 @@
     "rollup-plugin-dts": "^6.2.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.8.1",
-    "typescript": "^5.9.3"
-  }
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  },
+    "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
 }
