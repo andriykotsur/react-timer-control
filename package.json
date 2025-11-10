@@ -11,7 +11,8 @@
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "dev": "rollup -c -w",
-    "lint": "eslint src"
+    "format:check": "prettier src --check",
+    "format:write": "prettier src --write"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^19.2.2",
+    "prettier": "^3.6.2",
     "react": "^19.2.0",
     "rimraf": "^6.1.0",
     "rollup": "^4.53.1",
