@@ -1,16 +1,43 @@
 {
   "name": "react-timer-control",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "A reusable timer control component for React",
+  "main": "dist/cjs/bundle.js",
+  "module": "dist/esm/bundle.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && rollup -c",
+    "dev": "rollup -c -w",
+    "lint": "eslint src"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andriykotsur/react-timer-control.git"
+  },
+  "author": "Andriy Kotsur",
+  "homepage": "https://github.com/andriykotsur/react-timer-control",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andriykotsur/react-timer-control/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^19.2.2",
     "react": "^19.2.0",
+    "rimraf": "^6.1.0",
+    "rollup": "^4.53.1",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3"
   }
